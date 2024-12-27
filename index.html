@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenhouse Guardians</title>
+    <style>
+        body {
+            font-size: 120%;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            line-height: 1.6;
+            padding-top: 80px; /* Adds space for navbar */
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 60px; /* Adds space between navbar and title */
+        }
+        .nav {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+        .nav a {
+            float: right;
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav a:hover {
+            background-color: #575757;
+        }
+        .nav a.split {
+            float: left;
+            background-color: #333;
+            color: white;
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        .hidden {
+            display: none;
+        }
+        form {
+            margin-top: 2rem;
+        }
+        form input, form textarea, form button {
+            width: 97.7%;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+        form button {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            display: block;
+            margin: 0.5rem auto;
+        }       
+        form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Greenhouse Guardians</h1>
+    </header>
+    <div class="nav" id="navbar">
+        <a href="#" class="split" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('feedback')">Feedback</a>
+        <a href="#" onclick="showSection('solutions')">Solutions</a>
+        <a href="#" onclick="showSection('effects')">Effects</a>
+        <a href="#" onclick="showSection('causes')">Causes</a>
+        <a href="#" onclick="showSection('what')">Definition</a>
+    </div>
+
+    <section id="home">
+        <h1>Greenhouse Guardians</h1>
+        <h2>About Us</h2>
+        <p>Greenhouse Guardians is an initiative focused on addressing one of the most pressing challenges of our time—climate change. We aim to educate individuals, communities, and organizations about the critical role of greenhouse gases in global warming and inspire actions to reduce emissions.</p>
+        <p>Our platform serves as a comprehensive resource for understanding the science behind greenhouse gases, their sources, and their far-reaching effects on ecosystems, weather patterns, and human livelihoods. We believe that informed individuals can make meaningful contributions toward a sustainable planet.</p>
+        <p>Join us on a journey to create a world where the balance of our atmosphere is restored, and future generations can thrive. Whether you're just learning about greenhouse gases or are already a climate advocate, Greenhouse Guardians is here to support you every step of the way.</p>
+    </section>
+
+    <section id="what" class="hidden">
+        <h2>Definition</h2>
+        <p>Greenhouse gases are gases in the Earth's atmosphere that trap heat from the sun, preventing it from escaping.</p>
+        <h3>Role of Greenhouse Gases</h3>
+        <p>Greenhouse gases are essential in maintaining Earth's habitable temperature by trapping heat in the atmosphere, a process known as the greenhouse effect. Without them, the planet would be too cold to support life.</p>
+        <h3>Major Types of Greenhouse Gases</h3>
+        <p>Carbon Dioxide (CO<sub>2</sub>): Released through burning fossil fuels (coal, oil, natural gas), deforestation, and various industrial processes.</p>
+        <p>Methane (CH<sub>4</sub>): Produced during agricultural activities (e.g., livestock digestion), waste decomposition in landfills, and the production of natural gas.</p>
+        <p>Nitrous Oxide (N<sub>2</sub>O): Emitted from agricultural activities, industrial processes, and the combustion of fossil fuels and biomass.</p>
+        <p>Fluorinated Gases: Synthetic gases used in industrial applications, like refrigerants and aerosol propellants, with a much higher heat-trapping potential than (CO<sub>2</sub>).</p>
+    </section>
+
+    <section id="causes" class="hidden">
+        <h2>Causes of Greenhouse Gases</h2>
+        <h3>Energy Production</h3>
+        <p>Fossil fuel combustion for electricity and heat accounts for the largest share of greenhouse gas emissions globally.</p>
+        <h3>Transportation</h3>
+        <p>Cars, airplanes, and ships burning gasoline or diesel emit significant amounts of (CO<sub>2</sub>) and other pollutants.</p>
+        <h3>Industrial Emissions</h3>
+        <p>Factories and industrial processes contribute (CO<sub>2</sub>) and other gases during production and chemical reactions.</p>
+        <h3>Deforestation</h3>
+        <p>Trees absorb (CO<sub>2</sub>); cutting them down reduces the planet's natural ability to balance carbon emissions.</p>
+    </section>
+    
+    <section id="effects" class="hidden">
+        <h2>Effects of Greenhouse Gases</h2>
+        <h3>Health Impacts</h3>
+        <p>Increased air pollution can lead to respiratory diseases and other health issues.</p>
+        <h3>Economic Consequences</h3>
+        <p>Damage to infrastructure, agriculture, and ecosystems increases the economic burden on nations.</p>
+        <h3>Arctic and Antarctic Melting</h3>
+        <p>Rising temperatures accelerate ice melting, contributing to global sea-level rise and habitat loss for polar species.</p>
+    </section>
+
+    <section id="solutions" class="hidden">
+        <h2>Ways to Reduce Greenhouse Gases</h2>
+        <h3>Energy Transition</h3>
+        <p>Adopt renewable energy sources like solar, wind, and hydropower to reduce dependence on fossil fuels.</p>
+        <h3>Sustainable Practices</h3>
+        <p>Promote eco-friendly manufacturing and consumption habits to minimize industrial emissions.</p>
+        <h3>Technological Innovations</h3>
+        <p>Develop and invest in carbon capture and storage (CCS) technologies to remove (CO<sub>2</sub>) from the atmosphere.</p>
+        <h3>Community Actions</h3>
+        <p>Encourage individuals to adopt greener lifestyles, such as using public transport, reducing meat consumption, and recycling</p>
+    </section>
+
+    <section id="feedback" class="hidden">
+        <h2>Feedback</h2>
+        <p>We value your thoughts and suggestions. Please share your feedback below:</p>
+
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Your feedback here..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Thank you message -->
+        <div id="thankYouMessage" class="hidden">
+            <h3>Thank you for your feedback!</h3>
+            <p>Your input is valuable to us and helps improve our services.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Greenhouse Guardians. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down - hide navbar
+                navbar.style.top = '-70px';
+            } else {
+                // Scrolling up - show navbar
+                navbar.style.top = '0';
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scrolling
+        });
+
+        function showSection(id) {
+            // Prevent the page from jumping to the section
+            event.preventDefault();
+
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+        }
+        // Handle form submission
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            // Hide the form
+            document.getElementById('feedbackForm').classList.add('hidden');
+
+            // Show the thank you message
+            document.getElementById('thankYouMessage').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
