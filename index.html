@@ -12,16 +12,18 @@
             padding: 0;
             background-color: #f4f4f9;
             line-height: 1.6;
-            padding-top: 80px; /* Adds space for navbar */
+            padding-top: 80px;
         }
         header {
             background-color: #4CAF50;
             color: white;
             padding: 1rem;
             text-align: center;
-            margin-top: 60px; /* Adds space between navbar and title */
+            margin-top: 60px;
         }
         .nav {
+            align-items: center;
+            justify-content: center;
             overflow: hidden;
             background-color: #333;
             position: fixed;
@@ -36,6 +38,9 @@
             padding: 1rem;
             text-decoration: none;
             text-align: center;
+        }
+        .nav a span {
+            margin-left: 5px; 
         }
         .nav a:hover {
             background-color: #575757;
@@ -63,28 +68,99 @@
         .hidden {
             display: none;
         }
-        form {
-            margin-top: 2rem;
+        #feedback form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 0 auto;
         }
-        form input, form textarea, form button {
-            width: 97.7%;
+        #feedback form label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        #feedback form input, 
+        #feedback form textarea, 
+        #feedback form button {
+            width: calc(100% - 1rem);
             margin: 0.5rem 0;
-            padding: 0.5rem;
+            padding: 0.7rem;
             border: 1px solid #ccc;
             border-radius: 4px;
             resize: none;
         }
-        form button {
-            width: 100%;
-            padding: 0.5rem 1rem;
+        #feedback form button {
             background-color: #4CAF50;
             color: white;
-            border: none;
-            display: block;
-            margin: 0.5rem auto;
-        }       
-        form button:hover {
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #feedback form button:hover {
             background-color: #45a049;
+        }
+        #home {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Sustainable_Development_Goal_13Climate.svg/1200px-Sustainable_Development_Goal_13Climate.svg.png'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            padding: 4rem 2rem;
+        }
+        #what {
+            background-image: url('https://img.freepik.com/premium-vector/greenhouse-effect-global-warming-diagram_1639-44964.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+        }
+        #causes {
+            background-image: url('https://csdieselgenerators.com/wp-content/uploads/2023/05/2-1024x683.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+        }
+        #effects {
+            background-image: url('https://media.istockphoto.com/id/1171800441/vector/polar-bear.jpg?s=612x612&w=0&k=20&c=HR7HboxiPH1ucVw7hm1ii9X4XYa8Pr4vgQd_dBw6d2o='); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+        }
+        #solutions {
+            background-image: url('https://iea.imgix.net/e5864be0-1188-4136-9e42-f27d516da938/shutterstock_2497943075.jpg?auto=compress%2Cformat&fit=min&q=80&rect=0%2C0%2C2048%2C2048'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+        }
+        section h2, section h3, section p {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1rem;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        h4 {
+            font-size: 2.25rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            line-height: 2;
+        }
+        h5 {
+            font-size: 1.8rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            line-height: 2;
+        }
+        h6 {
+            font-size: 1.2rem;
+            font-weight: 1;
+            margin-top: 0.5rem;
+            margin-bottom: 1cap;
+            line-height: 1.4;
         }
     </style>
 </head>
@@ -93,7 +169,10 @@
         <h1>Greenhouse Guardians</h1>
     </header>
     <div class="nav" id="navbar">
-        <a href="#" class="split" onclick="showSection('home')">Home</a>
+        <a href="#" class="split" onclick="showSection('home')">
+            <img src="https://cdn2.iconfinder.com/data/icons/device-color/512/Untitled-21-512.png" alt="Home Icon" width="20" height="20">
+            <span>Home</span>
+        </a>
         <a href="#" onclick="showSection('feedback')">Feedback</a>
         <a href="#" onclick="showSection('solutions')">Solutions</a>
         <a href="#" onclick="showSection('effects')">Effects</a>
@@ -102,7 +181,8 @@
     </div>
 
     <section id="home">
-        <h1>Greenhouse Guardians</h1>
+        <h2>Greenhouse Guardians</h2>
+        <br> 
         <h2>About Us</h2>
         <p>Greenhouse Guardians is an initiative focused on addressing one of the most pressing challenges of our time—climate change. We aim to educate individuals, communities, and organizations about the critical role of greenhouse gases in global warming and inspire actions to reduce emissions.</p>
         <p>Our platform serves as a comprehensive resource for understanding the science behind greenhouse gases, their sources, and their far-reaching effects on ecosystems, weather patterns, and human livelihoods. We believe that informed individuals can make meaningful contributions toward a sustainable planet.</p>
@@ -123,6 +203,7 @@
 
     <section id="causes" class="hidden">
         <h2>Causes of Greenhouse Gases</h2>
+        <br>
         <h3>Energy Production</h3>
         <p>Fossil fuel combustion for electricity and heat accounts for the largest share of greenhouse gas emissions globally.</p>
         <h3>Transportation</h3>
@@ -135,6 +216,7 @@
     
     <section id="effects" class="hidden">
         <h2>Effects of Greenhouse Gases</h2>
+        <br>
         <h3>Health Impacts</h3>
         <p>Increased air pollution can lead to respiratory diseases and other health issues.</p>
         <h3>Economic Consequences</h3>
@@ -145,6 +227,7 @@
 
     <section id="solutions" class="hidden">
         <h2>Ways to Reduce Greenhouse Gases</h2>
+        <br>
         <h3>Energy Transition</h3>
         <p>Adopt renewable energy sources like solar, wind, and hydropower to reduce dependence on fossil fuels.</p>
         <h3>Sustainable Practices</h3>
@@ -156,8 +239,8 @@
     </section>
 
     <section id="feedback" class="hidden">
-        <h2>Feedback</h2>
-        <p>We value your thoughts and suggestions. Please share your feedback below:</p>
+        <h4>Feedback</h4>
+        <h6>We value your thoughts and suggestions. Please share your feedback below:</h6>
 
         <form id="feedbackForm">
             <label for="name">Name:</label>
@@ -169,10 +252,10 @@
             <button type="submit">Submit</button>
         </form>
 
-        <!-- Thank you message -->
+
         <div id="thankYouMessage" class="hidden">
-            <h3>Thank you for your feedback!</h3>
-            <p>Your input is valuable to us and helps improve our services.</p>
+            <h5>Thank you for your feedback!</h5>
+            <h6>Your input is valuable to us and helps improve our services.</h6>
         </div>
     </section>
 
@@ -183,37 +266,24 @@
     <script>
         let lastScrollTop = 0;
         const navbar = document.getElementById('navbar');
-
         window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
             if (scrollTop > lastScrollTop) {
-                // Scrolling down - hide navbar
                 navbar.style.top = '-70px';
             } else {
-                // Scrolling up - show navbar
                 navbar.style.top = '0';
             }
-
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scrolling
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
-
         function showSection(id) {
-            // Prevent the page from jumping to the section
             event.preventDefault();
-
             const sections = document.querySelectorAll('section');
             sections.forEach(section => section.classList.add('hidden'));
             document.getElementById(id).classList.remove('hidden');
         }
-        // Handle form submission
         document.getElementById('feedbackForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form from submitting
-
-            // Hide the form
+            event.preventDefault();
             document.getElementById('feedbackForm').classList.add('hidden');
-
-            // Show the thank you message
             document.getElementById('thankYouMessage').classList.remove('hidden');
         });
     </script>
